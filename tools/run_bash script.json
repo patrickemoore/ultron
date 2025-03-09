@@ -1,0 +1,33 @@
+{
+    "name": "create_and_run_bash_script",
+    "description": "Creates and runs a bash script with specified content in a specified directory.",
+    "strict": true,
+    "parameters": {
+      "type": "object",
+      "required": [
+        "script_content",
+        "directory",
+        "script_name",
+        "execute"
+      ],
+      "properties": {
+        "script_content": {
+          "type": "string",
+          "description": "The content of the bash script to be created"
+        },
+        "directory": {
+          "type": "string",
+          "description": "The directory where the script file will be created"
+        },
+        "script_name": {
+          "type": "string",
+          "description": "The name of the script file (default is 'script.sh')"
+        },
+        "execute": {
+          "type": "boolean",
+          "description": "Whether to execute the script after creation (default is true)"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
